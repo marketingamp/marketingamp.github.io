@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://marketingamp.github.io/sitemap.xml

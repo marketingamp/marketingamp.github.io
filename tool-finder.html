@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Find Your Perfect Tool — ToolStackReview</title>
+  <meta name="description" content="Answer 3 quick questions and get a personalized tool recommendation matched to your goals, budget, and experience level.">
+  <link rel="canonical" href="https://marketingamp.github.io/tool-finder.html">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "name": "Find Your Perfect Tool",
+    "description": "Answer 3 quick questions and get a personalized tool recommendation matched to your goals, budget, and experience level.",
+    "url": "https://marketingamp.github.io/tool-finder.html",
+    "publisher": {"@type": "Organization", "name": "ToolStackReview"},
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {"@type": "ListItem", "position": 1, "name": "Home", "item": "https://marketingamp.github.io/"},
+        {"@type": "ListItem", "position": 2, "name": "Tool Finder", "item": "https://marketingamp.github.io/tool-finder.html"}
+      ]
+    }
+  }
+  </script>
+  <style>
+    /* ===== Tool Finder Quiz Styles ===== */
+    .quiz-wrap {
+      max-width: 720px;
+      margin: 0 auto 3rem;
+      padding: 0 1.5rem;
+    }
+
+    .quiz-progress {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .quiz-progress-step {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .quiz-progress-dot {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      border: 2px solid var(--border);
+      color: var(--text-lighter);
+      background: var(--bg);
+      transition: all var(--transition);
+    }
+
+    .quiz-progress-dot.active {
+      border-color: var(--primary);
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .quiz-progress-dot.done {
+      border-color: var(--secondary);
+      background: var(--secondary);
+      color: #fff;
+    }
+
+    .quiz-progress-line {
+      width: 48px;
+      height: 2px;
+      background: var(--border);
+      transition: background var(--transition);
+    }
+
+    .quiz-progress-line.done {
+      background: var(--secondary);
+    }
+
+    .quiz-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      box-shadow: var(--shadow-lg);
+      padding: 2.5rem 2rem;
+      text-align: center;
+      position: relative;
+    }
+
+    .quiz-card h2 {
+      font-size: 1.5rem;
+      font-weight: 800;
+      margin-bottom: 0.5rem;
+      color: var(--text);
+    }
+
+    .quiz-card .quiz-subtitle {
+      color: var(--text-light);
+      margin-bottom: 2rem;
+      font-size: 0.95rem;
+    }
+
+    .quiz-options {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0.75rem;
+      text-align: left;
+    }
+
+    .quiz-option {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding: 1rem 1.25rem;
+      border: 2px solid var(--border);
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+      background: var(--bg);
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--text);
+    }
+
+    .quiz-option:hover {
+      border-color: var(--primary);
+      background: var(--primary-light);
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .quiz-option:active {
+      transform: translateY(0);
+    }
+
+    .quiz-option-icon {
+      font-size: 1.35rem;
+      flex-shrink: 0;
+      width: 28px;
+      text-align: center;
+    }
+
+    /* Step transitions */
+    .quiz-step {
+      display: none;
+    }
+
+    .quiz-step.active {
+      display: block;
+      animation: fadeInUp 0.35s ease-out forwards;
+    }
+
+    /* Back button */
+    .quiz-back {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      margin-bottom: 1.25rem;
+      color: var(--text-light);
+      font-size: 0.875rem;
+      font-weight: 500;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 0;
+      transition: color var(--transition);
+    }
+
+    .quiz-back:hover {
+      color: var(--primary);
+    }
+
+    /* Result card */
+    .result-card {
+      text-align: left;
+    }
+
+    .result-badge {
+      display: inline-block;
+      background: var(--secondary-light);
+      color: var(--secondary);
+      font-weight: 700;
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.3rem 0.75rem;
+      border-radius: 100px;
+      margin-bottom: 1rem;
+    }
+
+    .result-card h2 {
+      text-align: left;
+      font-size: 1.6rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .result-card .result-why {
+      color: var(--text-light);
+      font-size: 1rem;
+      line-height: 1.7;
+      margin-bottom: 1.25rem;
+    }
+
+    .result-price {
+      display: inline-block;
+      background: var(--accent-light);
+      color: #92400e;
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.35rem 0.85rem;
+      border-radius: 100px;
+      margin-bottom: 1.5rem;
+    }
+
+    .result-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary);
+      color: #fff;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 0.85rem 1.75rem;
+      border-radius: var(--radius);
+      border: none;
+      cursor: pointer;
+      text-decoration: none;
+      transition: all var(--transition);
+    }
+
+    .result-cta:hover {
+      background: var(--primary-dark);
+      color: #fff;
+      transform: translateY(-1px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .result-divider {
+      border: none;
+      border-top: 1px solid var(--border-light);
+      margin: 1.75rem 0;
+    }
+
+    .result-alts h3 {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: 0.75rem;
+    }
+
+    .result-alt-item {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0.75rem 0;
+      border-bottom: 1px solid var(--border-light);
+    }
+
+    .result-alt-item:last-child {
+      border-bottom: none;
+    }
+
+    .result-alt-name {
+      font-weight: 600;
+      color: var(--text);
+      font-size: 0.95rem;
+    }
+
+    .result-alt-link {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--primary);
+    }
+
+    .result-alt-link:hover {
+      color: var(--primary-dark);
+    }
+
+    .retake-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      margin-top: 1.5rem;
+      background: none;
+      border: 2px solid var(--border);
+      color: var(--text-light);
+      font-weight: 600;
+      font-size: 0.875rem;
+      padding: 0.6rem 1.25rem;
+      border-radius: var(--radius);
+      cursor: pointer;
+      transition: all var(--transition);
+    }
+
+    .retake-btn:hover {
+      border-color: var(--primary);
+      color: var(--primary);
+    }
+
+    /* Mobile responsive */
+    @media (max-width: 600px) {
+      .quiz-options {
+        grid-template-columns: 1fr;
+      }
+
+      .quiz-card {
+        padding: 1.75rem 1.25rem;
+      }
+
+      .quiz-card h2 {
+        font-size: 1.25rem;
+      }
+
+      .quiz-progress-line {
+        width: 28px;
+      }
+
+      .result-card h2 {
+        font-size: 1.3rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="nav-container">
+      <a href="/" class="logo">Tool<span>Stack</span>Review</a>
+      <button class="menu-toggle" aria-label="Toggle menu">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        <li><a href="/start-here.html">Start Here</a></li>
+        <li><a href="/content/ai-writing/">AI Writing</a></li>
+        <li><a href="/content/email-marketing/">Email Marketing</a></li>
+        <li><a href="/content/landing-pages/">Landing Pages</a></li>
+        <li><a href="/content/seo-tools/">SEO Tools</a></li>
+        <li><a href="/content/vpn-security/">VPN & Security</a></li>
+        <li><a href="/content/website-builders/">Website Builders</a></li>
+        <li><a href="/content/all-in-one/">All-in-One</a></li>
+        <li><a href="/resources.html">Our Picks</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="article-header">
+    <div class="breadcrumb">
+      <a href="/">Home</a> &raquo; Tool Finder
+    </div>
+    <h1>Find Your Perfect Tool</h1>
+    <div class="article-meta-header">
+      Answer 3 quick questions. Get a personalized recommendation in 30 seconds.
+    </div>
+  </div>
+
+  <div class="quiz-wrap">
+
+    <!-- Progress indicator -->
+    <div class="quiz-progress" id="quizProgress">
+      <div class="quiz-progress-step">
+        <div class="quiz-progress-dot active" id="dot1">1</div>
+      </div>
+      <div class="quiz-progress-line" id="line1"></div>
+      <div class="quiz-progress-step">
+        <div class="quiz-progress-dot" id="dot2">2</div>
+      </div>
+      <div class="quiz-progress-line" id="line2"></div>
+      <div class="quiz-progress-step">
+        <div class="quiz-progress-dot" id="dot3">3</div>
+      </div>
+    </div>
+
+    <!-- Step 1: Goal -->
+    <div class="quiz-step active" id="step1">
+      <div class="quiz-card">
+        <h2>What's your main goal?</h2>
+        <p class="quiz-subtitle">Pick the one thing that would move the needle most right now.</p>
+        <div class="quiz-options">
+          <button class="quiz-option" data-goal="seo" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#128269;</span> Get found online (SEO)
+          </button>
+          <button class="quiz-option" data-goal="email" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#9993;</span> Build an email list
+          </button>
+          <button class="quiz-option" data-goal="ai-writing" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#9997;</span> Create content faster
+          </button>
+          <button class="quiz-option" data-goal="website" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#127760;</span> Build a website
+          </button>
+          <button class="quiz-option" data-goal="ecommerce" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#128722;</span> Sell products online
+          </button>
+          <button class="quiz-option" data-goal="funnels" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#128200;</span> Create sales funnels
+          </button>
+          <button class="quiz-option" data-goal="crm" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#128101;</span> Manage customers
+          </button>
+          <button class="quiz-option" data-goal="courses" onclick="selectGoal(this)">
+            <span class="quiz-option-icon">&#127891;</span> Create online courses
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 2: Budget -->
+    <div class="quiz-step" id="step2">
+      <div class="quiz-card">
+        <button class="quiz-back" onclick="goBack(1)">&larr; Back</button>
+        <h2>What's your budget?</h2>
+        <p class="quiz-subtitle">Monthly spend you're comfortable with for this tool.</p>
+        <div class="quiz-options" style="grid-template-columns: 1fr 1fr;">
+          <button class="quiz-option" data-budget="free" onclick="selectBudget(this)">
+            <span class="quiz-option-icon">&#128077;</span> Free only
+          </button>
+          <button class="quiz-option" data-budget="low" onclick="selectBudget(this)">
+            <span class="quiz-option-icon">&#128176;</span> Under $25/mo
+          </button>
+          <button class="quiz-option" data-budget="mid" onclick="selectBudget(this)">
+            <span class="quiz-option-icon">&#128178;</span> Under $50/mo
+          </button>
+          <button class="quiz-option" data-budget="high" onclick="selectBudget(this)">
+            <span class="quiz-option-icon">&#128142;</span> Budget isn't the issue
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Step 3: Skill -->
+    <div class="quiz-step" id="step3">
+      <div class="quiz-card">
+        <button class="quiz-back" onclick="goBack(2)">&larr; Back</button>
+        <h2>How tech-savvy are you?</h2>
+        <p class="quiz-subtitle">Be honest &mdash; there's no wrong answer.</p>
+        <div class="quiz-options" style="grid-template-columns: 1fr;">
+          <button class="quiz-option" data-skill="beginner" onclick="selectSkill(this)">
+            <span class="quiz-option-icon">&#127793;</span> Beginner &mdash; I need something simple
+          </button>
+          <button class="quiz-option" data-skill="intermediate" onclick="selectSkill(this)">
+            <span class="quiz-option-icon">&#9881;</span> Intermediate &mdash; I can figure most things out
+          </button>
+          <button class="quiz-option" data-skill="advanced" onclick="selectSkill(this)">
+            <span class="quiz-option-icon">&#128640;</span> Advanced &mdash; give me power tools
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Result -->
+    <div class="quiz-step" id="stepResult">
+      <div class="quiz-card result-card" id="resultCard">
+        <!-- Populated by JS -->
+      </div>
+    </div>
+
+  </div>
+
+  <footer class="site-footer">
+    <div class="footer-bottom">
+      <p>Affiliate Disclosure: Some links on this site are affiliate links. We may earn a commission if you make a purchase. This doesn't affect our editorial independence.</p>
+      <p>&copy; 2026 ToolStackReview. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+  (function() {
+    var answers = { goal: '', budget: '', skill: '' };
+
+    function updateProgress(step) {
+      var dots = [document.getElementById('dot1'), document.getElementById('dot2'), document.getElementById('dot3')];
+      var lines = [document.getElementById('line1'), document.getElementById('line2')];
+
+      dots.forEach(function(dot, i) {
+        dot.classList.remove('active', 'done');
+        if (i + 1 < step) dot.classList.add('done');
+        else if (i + 1 === step) dot.classList.add('active');
+      });
+
+      lines.forEach(function(line, i) {
+        line.classList.toggle('done', i + 1 < step);
+      });
+
+      // Hide progress on result
+      document.getElementById('quizProgress').style.display = step > 3 ? 'none' : 'flex';
+    }
+
+    function showStep(num) {
+      document.querySelectorAll('.quiz-step').forEach(function(s) { s.classList.remove('active'); });
+      var target = num <= 3 ? document.getElementById('step' + num) : document.getElementById('stepResult');
+      target.classList.add('active');
+      updateProgress(num);
+      // Scroll to quiz top
+      document.querySelector('.quiz-wrap').scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+
+    window.selectGoal = function(el) {
+      answers.goal = el.getAttribute('data-goal');
+      showStep(2);
+    };
+
+    window.selectBudget = function(el) {
+      answers.budget = el.getAttribute('data-budget');
+      showStep(3);
+    };
+
+    window.selectSkill = function(el) {
+      answers.skill = el.getAttribute('data-skill');
+      showResult();
+    };
+
+    window.goBack = function(toStep) {
+      showStep(toStep);
+    };
+
+    window.retakeQuiz = function() {
+      answers = { goal: '', budget: '', skill: '' };
+      showStep(1);
+    };
+
+    function getRecommendation() {
+      var g = answers.goal;
+      var b = answers.budget;
+      var s = answers.skill;
+
+      var rec = {};
+
+      if (g === 'seo') {
+        if (b === 'free') {
+          rec = {
+            name: 'Google Search Console',
+            why: 'It\'s completely free, comes straight from Google, and gives you real data about how your site performs in search. For someone just starting with SEO on a free budget, nothing else comes close.',
+            price: 'Free',
+            cta: 'Read: Best SEO Tools for Small Business',
+            link: '/content/seo-tools/best-seo-tools-small-business.html',
+            alts: [
+              { name: 'Ubersuggest (free tier)', link: '/content/seo-tools/best-keyword-research-tools.html', label: 'Compare keyword tools' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'Semrush',
+            why: 'Semrush is the most comprehensive SEO platform available. Keyword research, competitor analysis, site audits, rank tracking — it handles everything in one place. Worth the investment once you\'re serious about organic growth.',
+            price: 'From $129.95/mo',
+            cta: 'Read Our Full Semrush Review',
+            link: '/content/seo-tools/semrush-review.html',
+            alts: [
+              { name: 'Google Search Console (free)', link: '/content/seo-tools/best-seo-tools-small-business.html', label: 'See free options' },
+              { name: 'Ahrefs', link: '/content/seo-tools/best-seo-tools-small-business.html', label: 'Compare alternatives' }
+            ]
+          };
+        }
+      } else if (g === 'email') {
+        if (b === 'free') {
+          rec = {
+            name: 'MailerLite (Free Plan)',
+            why: 'MailerLite\'s free plan supports up to 1,000 subscribers with automation, landing pages, and a drag-and-drop editor. It\'s genuinely generous — not a crippled trial.',
+            price: 'Free up to 1,000 subscribers',
+            cta: 'Read: Best Email Marketing Platforms',
+            link: '/content/email-marketing/best-email-marketing-platforms.html',
+            alts: [
+              { name: 'Kit (for creators)', link: '/content/email-marketing/kit-review.html', label: 'Read Kit review' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'MailerLite or Kit',
+            why: 'MailerLite offers the best overall value with powerful automation at fair pricing. Kit (formerly ConvertKit) is ideal if you\'re a creator — blogger, YouTuber, or podcaster — with features built specifically for audience building.',
+            price: 'MailerLite from $10/mo · Kit from $15/mo',
+            cta: 'Read: MailerLite vs Mailchimp',
+            link: '/content/email-marketing/mailerlite-vs-mailchimp.html',
+            alts: [
+              { name: 'Kit', link: '/content/email-marketing/kit-review.html', label: 'Read Kit review' },
+              { name: 'ActiveCampaign', link: '/content/email-marketing/best-email-marketing-platforms.html', label: 'See all platforms' }
+            ]
+          };
+        }
+      } else if (g === 'ai-writing') {
+        if (b === 'free') {
+          rec = {
+            name: 'Free AI Writing Tools',
+            why: 'Several solid AI writing tools offer free tiers that can handle blog posts, social media copy, and email drafts without spending a cent. Great for testing the waters before committing.',
+            price: 'Free',
+            cta: 'Read: Best Free AI Writing Tools',
+            link: '/content/ai-writing/best-ai-writing-tools-free.html',
+            alts: [
+              { name: 'Writesonic (free tier)', link: '/content/ai-writing/writesonic-review.html', label: 'Read Writesonic review' }
+            ]
+          };
+        } else if (b === 'high') {
+          rec = {
+            name: 'Jasper',
+            why: 'Jasper is the premium choice for teams that need brand voice consistency, collaboration features, and enterprise-grade output. If budget isn\'t the blocker, this is the tool that scales with you.',
+            price: 'From $49/mo',
+            cta: 'Read: Best AI Writing Tools',
+            link: '/content/ai-writing/best-ai-writing-tools.html',
+            alts: [
+              { name: 'Writesonic', link: '/content/ai-writing/writesonic-review.html', label: 'Read Writesonic review' },
+              { name: 'Copy.ai', link: '/content/ai-writing/jasper-vs-copy-ai.html', label: 'Jasper vs Copy.ai' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'Writesonic',
+            why: 'Writesonic delivers strong AI writing output — blog posts, landing pages, ad copy — at a price point that makes sense for solopreneurs and small teams. Solid bang for the buck.',
+            price: 'From $16/mo',
+            cta: 'Read Our Writesonic Review',
+            link: '/content/ai-writing/writesonic-review.html',
+            alts: [
+              { name: 'Jasper', link: '/content/ai-writing/best-ai-writing-tools.html', label: 'See all AI writing tools' },
+              { name: 'Free AI tools', link: '/content/ai-writing/best-ai-writing-tools-free.html', label: 'Free alternatives' }
+            ]
+          };
+        }
+      } else if (g === 'website') {
+        if (s === 'advanced') {
+          rec = {
+            name: 'Managed WordPress Hosting',
+            why: 'You want full control and you can handle the complexity. Managed WordPress hosting gives you the power of WordPress with someone else handling speed, security, and updates. Best of both worlds for technical users.',
+            price: 'From $20–$35/mo',
+            cta: 'Read: Best Managed WordPress Hosting',
+            link: '/content/website-builders/best-managed-wordpress-hosting.html',
+            alts: [
+              { name: 'Framer', link: '/content/website-builders/framer-review.html', label: 'Read Framer review' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'Carrd or Framer',
+            why: b === 'free'
+              ? 'Carrd lets you build a clean, fast one-page site for next to nothing ($19/year). Framer offers a free tier for simple sites with a modern, design-forward builder — no code needed.'
+              : 'Framer is the modern website builder for people who care about design but don\'t want to touch code. Carrd is the budget pick for simple one-page sites that just work.',
+            price: 'Carrd from $19/yr · Framer free tier available',
+            cta: 'Read: Best Website Builders for Small Business',
+            link: '/content/website-builders/best-website-builders-small-business.html',
+            alts: [
+              { name: 'Framer', link: '/content/website-builders/framer-review.html', label: 'Read Framer review' },
+              { name: 'Managed WordPress', link: '/content/website-builders/best-managed-wordpress-hosting.html', label: 'For advanced users' }
+            ]
+          };
+        }
+      } else if (g === 'ecommerce') {
+        rec = {
+          name: 'Shopify',
+          why: 'Shopify is still the gold standard for selling physical products online. Inventory, shipping, payments, themes — it handles everything so you can focus on selling. BigCommerce is a strong alternative if you need more built-in features without apps.',
+          price: 'From $39/mo',
+          cta: 'Read: Best E-Commerce Platforms',
+          link: '/content/all-in-one/best-ecommerce-platforms.html',
+          alts: [
+            { name: 'BigCommerce', link: '/content/all-in-one/best-ecommerce-platforms.html', label: 'Compare platforms' },
+            { name: 'Systeme.io (digital products)', link: '/content/all-in-one/systeme-io-review.html', label: 'For digital products' }
+          ]
+        };
+      } else if (g === 'funnels') {
+        if (b === 'free') {
+          rec = {
+            name: 'Systeme.io',
+            why: 'Systeme.io offers a genuinely useful free plan that includes sales funnels, email marketing, course hosting, and a website builder. It\'s the best all-in-one deal for bootstrapped businesses.',
+            price: 'Free plan available',
+            cta: 'Read Our Systeme.io Review',
+            link: '/content/all-in-one/systeme-io-review.html',
+            alts: [
+              { name: 'ClickFunnels alternatives', link: '/content/all-in-one/clickfunnels-alternatives.html', label: 'Compare funnel builders' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'ClickFunnels Alternatives',
+            why: 'ClickFunnels popularized funnel building, but it\'s pricey. Several alternatives deliver similar functionality at a fraction of the cost — and some include email, courses, and CRM built in.',
+            price: 'Varies — many under $50/mo',
+            cta: 'Read: ClickFunnels Alternatives',
+            link: '/content/all-in-one/clickfunnels-alternatives.html',
+            alts: [
+              { name: 'Systeme.io (free plan)', link: '/content/all-in-one/systeme-io-review.html', label: 'Read Systeme.io review' },
+              { name: 'Kartra', link: '/content/all-in-one/clickfunnels-alternatives.html', label: 'See all alternatives' }
+            ]
+          };
+        }
+      } else if (g === 'crm') {
+        rec = {
+          name: 'HubSpot CRM (Free)',
+          why: 'HubSpot\'s free CRM is genuinely free for the core features — contacts, deals, tasks, email tracking. It scales with you as you grow, and there\'s no reason to pay for a CRM until you outgrow it.',
+          price: 'Free (paid plans from $20/mo)',
+          cta: 'Read: Best CRM for Small Business',
+          link: '/content/all-in-one/best-crm-small-business.html',
+          alts: [
+            { name: 'Pipedrive', link: '/content/all-in-one/best-crm-small-business.html', label: 'Compare CRMs' }
+          ]
+        };
+      } else if (g === 'courses') {
+        if (b === 'free') {
+          rec = {
+            name: 'Systeme.io',
+            why: 'Systeme.io\'s free plan includes course hosting alongside funnels, email, and a website builder. If you\'re launching your first course on a tight budget, this is the smartest starting point.',
+            price: 'Free plan available',
+            cta: 'Read Our Systeme.io Review',
+            link: '/content/all-in-one/systeme-io-review.html',
+            alts: [
+              { name: 'Teachable', link: '/content/all-in-one/best-online-course-platforms.html', label: 'Compare course platforms' }
+            ]
+          };
+        } else {
+          rec = {
+            name: 'Teachable or Thinkific',
+            why: 'Both are purpose-built for course creators with polished student experiences, payment handling, and marketing tools. Teachable edges ahead on simplicity; Thinkific on customization.',
+            price: 'Teachable from $39/mo · Thinkific free tier available',
+            cta: 'Read: Best Online Course Platforms',
+            link: '/content/all-in-one/best-online-course-platforms.html',
+            alts: [
+              { name: 'Systeme.io (all-in-one)', link: '/content/all-in-one/systeme-io-review.html', label: 'Read Systeme.io review' },
+              { name: 'Kajabi', link: '/content/all-in-one/best-online-course-platforms.html', label: 'See all platforms' }
+            ]
+          };
+        }
+      }
+
+      return rec;
+    }
+
+    function showResult() {
+      var rec = getRecommendation();
+      var altsHtml = '';
+
+      if (rec.alts && rec.alts.length > 0) {
+        altsHtml = '<hr class="result-divider"><div class="result-alts"><h3>Also worth considering</h3>';
+        rec.alts.forEach(function(alt) {
+          altsHtml += '<div class="result-alt-item"><span class="result-alt-name">' + alt.name + '</span><a href="' + alt.link + '" class="result-alt-link">' + alt.label + ' &rarr;</a></div>';
+        });
+        altsHtml += '</div>';
+      }
+
+      document.getElementById('resultCard').innerHTML =
+        '<span class="result-badge">Your Match</span>' +
+        '<h2>' + rec.name + '</h2>' +
+        '<p class="result-why">' + rec.why + '</p>' +
+        '<div><span class="result-price">' + rec.price + '</span></div>' +
+        '<div style="margin-top:1.25rem"><a href="' + rec.link + '" class="result-cta">' + rec.cta + ' &rarr;</a></div>' +
+        altsHtml +
+        '<div style="text-align:center"><button class="retake-btn" onclick="retakeQuiz()">&#8634; Retake Quiz</button></div>';
+
+      showStep(4);
+    }
+  })();
+  </script>
+</body>
+</html>
