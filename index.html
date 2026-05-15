@@ -73,8 +73,14 @@
     }
 
     /* ── Quiz Section ── */
+    .hp-quiz-wrap {
+      background: #f8f9fb;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 3rem 0;
+    }
     .hp-quiz {
-      padding: 0 1.5rem 4rem;
+      padding: 0 1.5rem;
       max-width: 880px;
       margin: 0 auto;
     }
@@ -97,8 +103,9 @@
       gap: 0.65rem;
       padding: 1.25rem;
       background: #fff;
-      border: 1px solid #e5e7eb;
+      border: 1px solid #d1d5db;
       border-radius: 12px;
+      box-shadow: 0 1px 3px rgba(0,0,0,0.04);
       text-decoration: none;
       color: #0a0a0a;
       transition: border-color 0.2s, box-shadow 0.2s;
@@ -135,8 +142,7 @@
       justify-content: center;
       gap: 3rem;
       padding: 2.5rem 1.5rem;
-      border-top: 1px solid #f3f4f6;
-      border-bottom: 1px solid #f3f4f6;
+      background: #0f172a;
       margin-bottom: 4rem;
     }
     .hp-stat {
@@ -146,12 +152,12 @@
       display: block;
       font-size: 1.75rem;
       font-weight: 700;
-      color: #0a0a0a;
+      color: #fff;
       letter-spacing: -0.02em;
     }
     .hp-stat span {
       font-size: 0.82rem;
-      color: #9ca3af;
+      color: #94a3b8;
       text-transform: uppercase;
       letter-spacing: 0.06em;
       font-weight: 500;
@@ -185,16 +191,16 @@
     }
     .hp-bento-card {
       padding: 1.5rem;
-      background: #fafafa;
-      border: 1px solid #f3f4f6;
+      background: #f8f9fb;
+      border: 1px solid #e2e5ea;
       border-radius: 12px;
       text-decoration: none;
       color: #0a0a0a;
       transition: border-color 0.2s, background 0.2s;
     }
     .hp-bento-card:hover {
-      border-color: #d1d5db;
-      background: #f9fafb;
+      border-color: #c7cbd1;
+      background: #f3f5f7;
     }
     .hp-bento-card.wide {
       grid-column: span 2;
@@ -232,10 +238,10 @@
       align-items: baseline;
       gap: 1rem;
       padding: 1rem 0;
-      border-bottom: 1px solid #f3f4f6;
+      border-bottom: 1px solid #e5e7eb;
     }
     .hp-review-item:first-child {
-      border-top: 1px solid #f3f4f6;
+      border-top: 1px solid #e5e7eb;
     }
     .hp-review-cat {
       flex-shrink: 0;
@@ -263,9 +269,15 @@
     }
 
     /* ── How We Work ── */
+    .hp-process-wrap {
+      background: #f8f9fb;
+      border-top: 1px solid #e5e7eb;
+      border-bottom: 1px solid #e5e7eb;
+      padding: 4rem 0;
+    }
     .hp-process {
       max-width: 880px;
-      margin: 0 auto 4rem;
+      margin: 0 auto;
       padding: 0 1.5rem;
     }
     .hp-steps {
@@ -284,10 +296,10 @@
       width: 32px;
       height: 32px;
       border-radius: 8px;
-      background: #f3f4f6;
+      background: #0f172a;
       font-size: 0.85rem;
       font-weight: 700;
-      color: #0a0a0a;
+      color: #fff;
       margin-bottom: 0.75rem;
     }
     .hp-step h3 {
@@ -306,8 +318,8 @@
     /* ── Newsletter ── */
     .hp-newsletter {
       max-width: 520px;
-      margin: 0 auto 5rem;
-      padding: 0 1.5rem;
+      margin: 0 auto;
+      padding: 4rem 1.5rem 5rem;
       text-align: center;
     }
     .hp-newsletter h2 {
@@ -357,6 +369,70 @@
     .hp-nl-note {
       font-size: 0.75rem;
       color: #9ca3af;
+    }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(24px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .hp-hero {
+      animation: fadeUp 0.7s ease-out both;
+    }
+    .hp-quiz-heading {
+      animation: fadeIn 0.6s ease-out 0.2s both;
+    }
+    .hp-quiz-card {
+      animation: fadeUp 0.5s ease-out both;
+    }
+    .hp-quiz-card:nth-child(1) { animation-delay: 0.1s; }
+    .hp-quiz-card:nth-child(2) { animation-delay: 0.15s; }
+    .hp-quiz-card:nth-child(3) { animation-delay: 0.2s; }
+    .hp-quiz-card:nth-child(4) { animation-delay: 0.25s; }
+    .hp-quiz-card:nth-child(5) { animation-delay: 0.3s; }
+    .hp-quiz-card:nth-child(6) { animation-delay: 0.35s; }
+    .hp-quiz-card:nth-child(7) { animation-delay: 0.4s; }
+    .hp-quiz-card:nth-child(8) { animation-delay: 0.45s; }
+    .hp-quiz-card:hover {
+      transform: translateY(-2px);
+    }
+    .hp-bento-card {
+      transition: border-color 0.2s, background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .hp-bento-card:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 4px 16px rgba(0,0,0,0.06);
+    }
+    .hp-review-item {
+      transition: background 0.15s;
+    }
+    .hp-review-item:hover {
+      background: #f8f9fb;
+    }
+    .hp-stat strong {
+      transition: color 0.2s;
+    }
+    .hp-stat:hover strong {
+      color: #818cf8;
+    }
+    .hp-step {
+      transition: transform 0.2s;
+    }
+    .hp-step:hover {
+      transform: translateY(-2px);
+    }
+    .hp-nl-form button {
+      transition: background 0.2s, transform 0.15s;
+    }
+    .hp-nl-form button:hover {
+      transform: translateY(-1px);
+    }
+    .hp-label {
+      animation: fadeIn 0.5s ease-out both;
     }
 
     /* ── Responsive ── */
@@ -431,6 +507,7 @@
     </section>
 
     <!-- Quiz Picker -->
+    <div class="hp-quiz-wrap">
     <section class="hp-quiz">
       <h2 class="hp-quiz-heading">I want to&hellip;</h2>
       <div class="hp-quiz-grid">
@@ -485,6 +562,7 @@
 
       </div>
     </section>
+    </div>
 
     <!-- Stats -->
     <div class="hp-stats">
@@ -576,6 +654,7 @@
     </section>
 
     <!-- How We Work -->
+    <div class="hp-process-wrap">
     <section class="hp-process">
       <p class="hp-section-label">Our Process</p>
       <h2 class="hp-section-title">How every review is made</h2>
@@ -602,6 +681,7 @@
         </div>
       </div>
     </section>
+    </div>
 
     <!-- Newsletter -->
     <section class="hp-newsletter">
