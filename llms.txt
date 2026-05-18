@@ -1,0 +1,135 @@
+# ToolStackReview
+
+> Independent, in-depth reviews and comparisons of AI tools, SaaS platforms, and business software for small businesses and entrepreneurs. Hands-on testing of 60+ tools with real accounts.
+
+## About
+
+ToolStackReview is founded by Dave Hassell and provides honest, research-backed reviews of digital tools and software. Every tool is tested hands-on with real accounts before being reviewed. The site covers AI writing tools, email marketing platforms, SEO software, VPN services, website builders, landing page builders, CRMs, e-commerce platforms, accounting software, and more.
+
+- Author: Dave Hassell
+- Contact: dave.hassell@mac.com
+- Site: https://marketingamp.github.io
+
+## Site Pages
+
+- [Home](https://marketingamp.github.io/): Main landing page with featured reviews and tool categories
+- [Start Here](https://marketingamp.github.io/start-here.html): Getting started guide for new visitors
+- [Resources](https://marketingamp.github.io/resources.html): Curated resource recommendations
+- [Tool Finder](https://marketingamp.github.io/tool-finder.html): Interactive tool to find the right software for your needs
+- [Deals](https://marketingamp.github.io/deals.html): Current discounts and special offers on reviewed tools
+- [About](https://marketingamp.github.io/about.html): About the team, review methodology, and editorial standards
+- [Affiliate Disclosure](https://marketingamp.github.io/disclosure.html): Affiliate relationship disclosure
+- [Terms](https://marketingamp.github.io/terms.html): Terms of use
+
+## AI Writing & Content Tools
+
+- [Best AI Writing Tools](https://marketingamp.github.io/content/ai-writing/best-ai-writing-tools.html): Roundup of the top AI writing assistants
+- [Best Free AI Writing Tools](https://marketingamp.github.io/content/ai-writing/best-ai-writing-tools-free.html): Top AI writing tools with free plans
+- [Best AI Tools for Content Marketing](https://marketingamp.github.io/content/ai-writing/best-ai-tools-for-content-marketing.html): AI tools specifically for content marketers
+- [Best AI Tools for SEO](https://marketingamp.github.io/content/ai-writing/best-ai-tools-for-seo.html): AI-powered tools for search engine optimization
+- [Best AI Image Generators](https://marketingamp.github.io/content/ai-writing/best-ai-image-generators.html): Top AI image generation platforms compared
+- [Jasper vs Copy.ai](https://marketingamp.github.io/content/ai-writing/jasper-vs-copy-ai.html): Head-to-head comparison of two leading AI writers
+- [Writesonic Review](https://marketingamp.github.io/content/ai-writing/writesonic-review.html): In-depth review of Writesonic AI writing platform
+- [Canva vs Adobe](https://marketingamp.github.io/content/ai-writing/canva-vs-adobe.html): Comparison of Canva and Adobe for design and content creation
+
+## Email Marketing
+
+- [Best Email Marketing Platforms](https://marketingamp.github.io/content/email-marketing/best-email-marketing-platforms.html): Top email marketing services compared
+- [Best Email Automation Tools](https://marketingamp.github.io/content/email-marketing/best-email-automation-tools.html): Best platforms for email automation workflows
+- [Best Email Marketing for E-commerce](https://marketingamp.github.io/content/email-marketing/best-email-marketing-for-ecommerce.html): Email platforms built for online stores
+- [Kit Review](https://marketingamp.github.io/content/email-marketing/kit-review.html): Review of Kit (formerly ConvertKit) email platform
+- [GetResponse Review](https://marketingamp.github.io/content/email-marketing/getresponse-review.html): In-depth review of GetResponse email marketing
+- [MailerLite vs Mailchimp](https://marketingamp.github.io/content/email-marketing/mailerlite-vs-mailchimp.html): Comparison of MailerLite and Mailchimp
+- [ConvertKit vs Mailchimp](https://marketingamp.github.io/content/email-marketing/convertkit-vs-mailchimp.html): Head-to-head comparison for creators and small businesses
+- [How to Build an Email List](https://marketingamp.github.io/content/email-marketing/how-to-build-email-list.html): Guide to growing your email subscriber list
+
+## SEO Tools
+
+- [Best SEO Tools for Small Business](https://marketingamp.github.io/content/seo-tools/best-seo-tools-small-business.html): Top SEO platforms for small businesses
+- [Best Keyword Research Tools](https://marketingamp.github.io/content/seo-tools/best-keyword-research-tools.html): Tools for finding profitable keywords
+- [Semrush Review](https://marketingamp.github.io/content/seo-tools/semrush-review.html): Comprehensive Semrush platform review
+- [Semrush vs Ahrefs](https://marketingamp.github.io/content/seo-tools/semrush-vs-ahrefs.html): Comparison of the two leading SEO suites
+- [How to Improve SEO Rankings](https://marketingamp.github.io/content/seo-tools/how-to-improve-seo-rankings.html): Actionable guide to boosting search rankings
+
+## VPN & Security
+
+- [Best VPN 2026](https://marketingamp.github.io/content/vpn-security/best-vpn-2026.html): Top VPN services for the current year
+- [Best VPN for Privacy](https://marketingamp.github.io/content/vpn-security/best-vpn-for-privacy.html): Most privacy-focused VPN providers
+- [Best VPN for Streaming](https://marketingamp.github.io/content/vpn-security/best-vpn-streaming.html): Best VPNs for unblocking streaming content
+- [Best VPN for Small Business](https://marketingamp.github.io/content/vpn-security/best-vpn-small-business.html): VPN solutions for business use
+- [NordVPN Review](https://marketingamp.github.io/content/vpn-security/nordvpn-review.html): In-depth NordVPN review
+- [NordVPN vs Surfshark](https://marketingamp.github.io/content/vpn-security/nordvpn-vs-surfshark.html): Head-to-head VPN comparison
+- [ExpressVPN vs NordVPN](https://marketingamp.github.io/content/vpn-security/expressvpn-vs-nordvpn.html): Comparison of two top-tier VPN providers
+
+## Website Builders & Hosting
+
+- [Best Website Builders for Small Business](https://marketingamp.github.io/content/website-builders/best-website-builders-small-business.html): Top website builders compared
+- [Best Managed WordPress Hosting](https://marketingamp.github.io/content/website-builders/best-managed-wordpress-hosting.html): Managed WordPress hosting providers reviewed
+- [Framer Review](https://marketingamp.github.io/content/website-builders/framer-review.html): Review of Framer as a website builder
+- [Kinsta Review](https://marketingamp.github.io/content/website-builders/kinsta-review.html): In-depth Kinsta managed hosting review
+- [Squarespace vs Wix](https://marketingamp.github.io/content/website-builders/squarespace-vs-wix.html): Comparison of two popular website builders
+- [Wix vs WordPress](https://marketingamp.github.io/content/website-builders/wix-vs-wordpress.html): Choosing between Wix and WordPress
+- [How to Choose a Website Builder](https://marketingamp.github.io/content/website-builders/how-to-choose-website-builder.html): Guide to selecting the right website builder
+
+## Landing Pages
+
+- [Best Landing Page Builders](https://marketingamp.github.io/content/landing-pages/best-landing-page-builders.html): Top landing page platforms compared
+- [Best Free Landing Page Builders](https://marketingamp.github.io/content/landing-pages/best-free-landing-page-builders.html): Landing page tools with free plans
+- [Best Landing Pages for Lead Generation](https://marketingamp.github.io/content/landing-pages/best-landing-pages-for-lead-generation.html): Landing page builders optimized for leads
+- [Leadpages Review](https://marketingamp.github.io/content/landing-pages/leadpages-review.html): In-depth Leadpages review
+- [Instapage Review](https://marketingamp.github.io/content/landing-pages/instapage-review.html): Comprehensive Instapage review
+- [Leadpages vs Unbounce](https://marketingamp.github.io/content/landing-pages/leadpages-vs-unbounce.html): Head-to-head landing page builder comparison
+- [How to Create a Landing Page That Converts](https://marketingamp.github.io/content/landing-pages/how-to-create-landing-page-converts.html): Guide to building high-converting landing pages
+
+## Business & All-in-One Platforms
+
+- [Best CRM for Small Business](https://marketingamp.github.io/content/all-in-one/best-crm-small-business.html): Top CRM platforms for small teams
+- [Best E-commerce Platforms](https://marketingamp.github.io/content/all-in-one/best-ecommerce-platforms.html): Leading e-commerce solutions compared
+- [Best Sales Funnel Builders](https://marketingamp.github.io/content/all-in-one/best-sales-funnel-builders.html): Top tools for building sales funnels
+- [Best Project Management Tools](https://marketingamp.github.io/content/all-in-one/best-project-management-tools.html): Project management platforms for teams
+- [Best Online Course Platforms](https://marketingamp.github.io/content/all-in-one/best-online-course-platforms.html): Platforms for creating and selling courses
+- [Best Webinar Platforms](https://marketingamp.github.io/content/all-in-one/best-webinar-platforms.html): Top webinar and virtual event tools
+- [Best Social Media Management Tools](https://marketingamp.github.io/content/all-in-one/best-social-media-management-tools.html): Tools for managing social media accounts
+- [Best Accounting Software for Small Business](https://marketingamp.github.io/content/all-in-one/best-accounting-software-small-business.html): Accounting platforms for small businesses
+- [Best Invoicing Software](https://marketingamp.github.io/content/all-in-one/best-invoicing-software.html): Top invoicing and billing tools
+- [Best Video Editing Software](https://marketingamp.github.io/content/all-in-one/best-video-editing-software.html): Video editing tools compared
+- [ClickFunnels Alternatives](https://marketingamp.github.io/content/all-in-one/clickfunnels-alternatives.html): Best alternatives to ClickFunnels
+- [ClickFunnels Review](https://marketingamp.github.io/content/all-in-one/clickfunnels-review.html): In-depth ClickFunnels platform review
+- [Systeme.io Review](https://marketingamp.github.io/content/all-in-one/systeme-io-review.html): Review of Systeme.io all-in-one platform
+- [GoHighLevel Review](https://marketingamp.github.io/content/all-in-one/gohighlevel-review.html): Comprehensive GoHighLevel review
+- [HubSpot Review](https://marketingamp.github.io/content/all-in-one/hubspot-review.html): In-depth HubSpot CRM and marketing review
+- [Shopify Review](https://marketingamp.github.io/content/all-in-one/shopify-review.html): Comprehensive Shopify e-commerce review
+- [FreshBooks Review](https://marketingamp.github.io/content/all-in-one/freshbooks-review.html): In-depth FreshBooks accounting review
+- [HubSpot vs Salesforce for Small Business](https://marketingamp.github.io/content/all-in-one/hubspot-vs-salesforce-small-business.html): CRM comparison for small teams
+- [Kajabi vs Teachable](https://marketingamp.github.io/content/all-in-one/kajabi-vs-teachable.html): Online course platform comparison
+- [FreshBooks vs QuickBooks](https://marketingamp.github.io/content/all-in-one/freshbooks-vs-quickbooks.html): Small business accounting software comparison
+- [Buffer vs Hootsuite](https://marketingamp.github.io/content/all-in-one/buffer-vs-hootsuite.html): Social media management tool comparison
+- [How to Start Affiliate Marketing](https://marketingamp.github.io/content/all-in-one/how-to-start-affiliate-marketing.html): Beginner's guide to affiliate marketing
+
+## Alternatives (Comparison Articles)
+
+- [Semrush Alternatives](https://marketingamp.github.io/content/seo-tools/semrush-alternatives.html): 7 cheaper alternatives to Semrush for SEO
+- [Mailchimp Alternatives](https://marketingamp.github.io/content/email-marketing/mailchimp-alternatives.html): 8 email marketing platforms with better features and lower prices
+- [HubSpot Alternatives](https://marketingamp.github.io/content/all-in-one/hubspot-alternatives.html): 7 CRM alternatives for small business
+- [NordVPN Alternatives](https://marketingamp.github.io/content/vpn-security/nordvpn-alternatives.html): 6 VPN alternatives tested for speed and privacy
+- [Leadpages Alternatives](https://marketingamp.github.io/content/landing-pages/leadpages-alternatives.html): 7 landing page builders with better value
+- [ClickFunnels Alternatives](https://marketingamp.github.io/content/all-in-one/clickfunnels-alternatives.html): Top alternatives to ClickFunnels for sales funnels
+
+## Pricing Guides
+
+- [ClickFunnels Pricing](https://marketingamp.github.io/content/all-in-one/clickfunnels-pricing.html): Complete ClickFunnels pricing breakdown with hidden costs
+- [Semrush Pricing](https://marketingamp.github.io/content/seo-tools/semrush-pricing.html): All Semrush plans compared — Pro, Guru, Business
+- [GoHighLevel Pricing](https://marketingamp.github.io/content/all-in-one/gohighlevel-pricing.html): GoHighLevel plan breakdown for agencies
+- [Systeme.io Pricing](https://marketingamp.github.io/content/all-in-one/systeme-io-pricing.html): Free vs paid plans explained
+- [GetResponse Pricing](https://marketingamp.github.io/content/email-marketing/getresponse-pricing.html): All plans by list size
+- [Shopify Pricing](https://marketingamp.github.io/content/all-in-one/shopify-pricing.html): Every plan plus transaction fees explained
+
+## Category Pages
+
+- [AI Writing Tools](https://marketingamp.github.io/content/ai-writing/): All AI writing and content tool reviews
+- [Email Marketing](https://marketingamp.github.io/content/email-marketing/): All email marketing reviews and guides
+- [Landing Pages](https://marketingamp.github.io/content/landing-pages/): All landing page builder reviews
+- [SEO Tools](https://marketingamp.github.io/content/seo-tools/): All SEO tool reviews and guides
+- [VPN & Security](https://marketingamp.github.io/content/vpn-security/): All VPN and security reviews
+- [Website Builders](https://marketingamp.github.io/content/website-builders/): All website builder reviews
+- [Business Tools](https://marketingamp.github.io/content/all-in-one/): All business and all-in-one platform reviews
