@@ -124,6 +124,14 @@ ToolStackReview is founded by Dave Hassell and provides honest, research-backed 
 - [GetResponse Pricing](https://marketingamp.github.io/content/email-marketing/getresponse-pricing.html): All plans by list size
 - [Shopify Pricing](https://marketingamp.github.io/content/all-in-one/shopify-pricing.html): Every plan plus transaction fees explained
 
+## Head-to-Head Comparisons
+
+- [Systeme.io vs ClickFunnels](https://marketingamp.github.io/content/all-in-one/systeme-io-vs-clickfunnels.html): Feature and pricing comparison of two popular funnel builders
+- [GoHighLevel vs ClickFunnels](https://marketingamp.github.io/content/all-in-one/gohighlevel-vs-clickfunnels.html): Agency CRM vs funnel builder — which to choose
+- [Is NordVPN Worth It?](https://marketingamp.github.io/content/vpn-security/is-nordvpn-worth-it.html): Honest assessment after 6 months of daily use
+- [Best Password Managers](https://marketingamp.github.io/content/vpn-security/best-password-managers.html): Top 5 password managers tested and compared
+- [Best Email Marketing for Small Business](https://marketingamp.github.io/content/email-marketing/best-email-marketing-for-small-business.html): Email platforms compared for small business needs
+
 ## Category Pages
 
 - [AI Writing Tools](https://marketingamp.github.io/content/ai-writing/): All AI writing and content tool reviews
