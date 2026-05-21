@@ -20,7 +20,7 @@ What I kept: funnel builder, email automation, course hosting, affiliate managem
 
 If you're doing $10k+/month and heavily use one-click upsells and complex funnels, ClickFunnels is still the best. But if you're bootstrapping or doing under $5k/mo, there's no reason to pay $97/mo when free alternatives exist.
 
-I wrote up a full comparison of the options I tested here: https://marketingamp.github.io/content/all-in-one/clickfunnels-alternatives.html
+I wrote up a full comparison of the options I tested here: https://marketingamp.github.io/content/all-in-one/clickfunnels-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -38,7 +38,7 @@ Cons: The learning curve is real — took me about 2-3 weeks to feel comfortable
 
 Bottom line: If you're an agency managing 5+ clients, it's a no-brainer economically. If you're a solo business owner with simple needs, it might be overkill — look at Systeme.io instead.
 
-Full pricing breakdown if it helps: https://marketingamp.github.io/content/all-in-one/gohighlevel-pricing.html
+Full pricing breakdown if it helps: https://marketingamp.github.io/content/all-in-one/gohighlevel-pricing.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -58,7 +58,7 @@ Semrush at $140/mo is great but way too much for most small sites. Here's what I
 
 **The key insight:** Most people buy Semrush too early. You don't need 500 tracked keywords when your site has 20 pages.
 
-More detail on each option: https://marketingamp.github.io/content/seo-tools/semrush-alternatives.html
+More detail on each option: https://marketingamp.github.io/content/seo-tools/semrush-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -80,7 +80,7 @@ Mailchimp has gotten expensive and honestly the UX has gone downhill. Here's wha
 
 The biggest mistake I see: people choosing an email tool based on the free plan, then getting locked into an expensive paid plan. Pick based on what the $30-50/mo tier looks like.
 
-Full comparison here: https://marketingamp.github.io/content/email-marketing/mailchimp-alternatives.html
+Full comparison here: https://marketingamp.github.io/content/email-marketing/mailchimp-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -102,7 +102,7 @@ Depends on what you need:
 
 **Best all-in-one:** If you also need email + funnels + courses, skip the standalone landing page builder entirely and go with Systeme.io or ClickFunnels.
 
-I tested all of these: https://marketingamp.github.io/content/landing-pages/leadpages-alternatives.html
+I tested all of these: https://marketingamp.github.io/content/landing-pages/leadpages-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -124,7 +124,7 @@ The subscription is the easy part — $39/mo for Basic (or $29 on annual). The r
 
 The honest answer to "is Shopify worth it": yes, if you're selling products and want minimal tech headaches. WooCommerce is technically "free" but hosting + plugins + maintenance adds up fast and takes more time.
 
-Full breakdown with the math: https://marketingamp.github.io/content/all-in-one/shopify-pricing.html
+Full breakdown with the math: https://marketingamp.github.io/content/all-in-one/shopify-pricing.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -144,7 +144,7 @@ HubSpot's free CRM is great but the second you need marketing features it jumps 
 
 **Honest take:** HubSpot is genuinely the best CRM ecosystem if you can afford it. The integrations, reporting, and support are unmatched. But most businesses under $1M/year in revenue don't need that level of tooling.
 
-More options compared: https://marketingamp.github.io/content/all-in-one/hubspot-alternatives.html
+More options compared: https://marketingamp.github.io/content/all-in-one/hubspot-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -168,7 +168,7 @@ I've been doing affiliate marketing for a while now. Here's what I wish someone 
 
 **The biggest mistake:** Trying to cover too many products. Start with 5-10 products you can genuinely recommend and go deep.
 
-Wrote up the full process: https://marketingamp.github.io/content/all-in-one/how-to-start-affiliate-marketing.html
+Wrote up the full process: https://marketingamp.github.io/content/all-in-one/how-to-start-affiliate-marketing.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -190,7 +190,7 @@ NordVPN is solid but there are good reasons to consider alternatives:
 
 Quick comparison: NordVPN's sweet spot is the balance of speed, features, and price. If any single factor matters more (cheaper, more private, better streaming), one of the alternatives will beat it.
 
-Full comparison: https://marketingamp.github.io/content/vpn-security/nordvpn-alternatives.html
+Full comparison: https://marketingamp.github.io/content/vpn-security/nordvpn-alternatives.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
@@ -215,7 +215,7 @@ Built my list to 2,000+ subscribers over 8 months. Here's what actually worked:
 
 **The most important thing:** Your lead magnet needs to solve a specific, immediate problem. "The exact email template that got me 47% open rates" beats "10 tips for better marketing" every time.
 
-Detailed guide: https://marketingamp.github.io/content/email-marketing/how-to-build-email-list.html
+Detailed guide: https://marketingamp.github.io/content/email-marketing/how-to-build-email-list.html?utm_source=reddit&utm_medium=social&utm_campaign=may2026
 
 ---
 
